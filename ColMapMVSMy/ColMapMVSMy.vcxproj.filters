@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="gpu_mat_prng.cu" />
+    <CudaCompile Include="gpu_mat_ref_image.cu" />
+    <CudaCompile Include="kernel.cu" />
+    <CudaCompile Include="patch_match_cuda.cu" />
+    <CudaCompile Include="CallKernelsCUDA.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BilateralGrid.cpp" />
+    <ClCompile Include="consistency_graph.cc" />
+    <ClCompile Include="cuda.cc" />
+    <ClCompile Include="cudacc.cc" />
+    <ClCompile Include="depth_map.cc" />
+    <ClCompile Include="FastBilateralSolverMe.cpp" />
+    <ClCompile Include="fusion.cc" />
+    <ClCompile Include="guidedfilter.cpp" />
+    <ClCompile Include="image.cc" />
+    <ClCompile Include="JointBilateralFilter.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="math.cc" />
+    <ClCompile Include="model.cc" />
+    <ClCompile Include="MyPatchMatch.cpp" />
+    <ClCompile Include="normal_map.cc" />
+    <ClCompile Include="patch_match.cc" />
+    <ClCompile Include="RansacRunner.cpp" />
+    <ClCompile Include="SLICSuperpixels.cpp" />
+    <ClCompile Include="threading.cc" />
+    <ClCompile Include="Undistortion.cpp" />
+    <ClCompile Include="upsampler.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="workspace.cc" />
+    <ClCompile Include="include\MRF2.2\BP-S.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\GCoptimization.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\graph.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\ICM.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\LinkedBlockList.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\maxflow.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\MaxProdBP.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\mrf.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\regions-maxprod.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="include\MRF2.2\TRW-S.cpp">
+      <Filter>MRF</Filter>
+    </ClCompile>
+    <ClCompile Include="main_peac_mrf.cpp" />
+    <ClCompile Include="plane_detection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BilateralGrid.h" />
+    <ClInclude Include="BilateralTextureFilter.h" />
+    <ClInclude Include="consistency_graph.h" />
+    <ClInclude Include="cuda.h" />
+    <ClInclude Include="cudacc.h" />
+    <ClInclude Include="cuda_array_wrapper.h" />
+    <ClInclude Include="cuda_rotate.h" />
+    <ClInclude Include="depth_map.h" />
+    <ClInclude Include="FastBilateralSolverMe.h" />
+    <ClInclude Include="fusion.h" />
+    <ClInclude Include="gpu_mat.h" />
+    <ClInclude Include="gpu_mat_prng.h" />
+    <ClInclude Include="gpu_mat_ref_image.h" />
+    <ClInclude Include="guidedfilter.h" />
+    <ClInclude Include="image.h" />
+    <ClInclude Include="JointBilateralFilter.h" />
+    <ClInclude Include="mat.h" />
+    <ClInclude Include="math.h" />
+    <ClInclude Include="model.h" />
+    <ClInclude Include="MyPatchMatch.h" />
+    <ClInclude Include="normal_map.h" />
+    <ClInclude Include="patch_match.h" />
+    <ClInclude Include="patch_match_cuda.h" />
+    <ClInclude Include="peac\DisjointSet.hpp" />
+    <ClInclude Include="peac\eig33sym.hpp" />
+    <ClInclude Include="RansacRunner.h" />
+    <ClInclude Include="SLICSuperpixels.h" />
+    <ClInclude Include="threading.h" />
+    <ClInclude Include="Undistortion.h" />
+    <ClInclude Include="upsampler.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="workspace.h" />
+    <ClInclude Include="include\MRF2.2\block.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\BP-S.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\energy.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\GCoptimization.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\graph.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\ICM.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\LinkedBlockList.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\MaxProdBP.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\mrf.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\regions-new.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\TRW-S.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MRF2.2\typeTruncatedQuadratic2D.h">
+      <Filter>MRF</Filter>
+    </ClInclude>
+    <ClInclude Include="include\peac\AHCParamSet.hpp">
+      <Filter>peac</Filter>
+    </ClInclude>
+    <ClInclude Include="include\peac\AHCPlaneFitter.hpp">
+      <Filter>peac</Filter>
+    </ClInclude>
+    <ClInclude Include="include\peac\AHCPlaneSeg.hpp">
+      <Filter>peac</Filter>
+    </ClInclude>
+    <ClInclude Include="include\peac\AHCTypes.hpp">
+      <Filter>peac</Filter>
+    </ClInclude>
+    <ClInclude Include="include\peac\AHCUtils.hpp">
+      <Filter>peac</Filter>
+    </ClInclude>
+    <ClInclude Include="include\peac\DisjointSet.hpp" />
+    <ClInclude Include="include\peac\eig33sym.hpp" />
+    <ClInclude Include="plane_detection.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="MRF">
+      <UniqueIdentifier>{ea44fecb-1bd7-4aa6-b287-10d20c787f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="peac">
+      <UniqueIdentifier>{7cd6b88a-d260-4f39-824b-6f971b250133}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\MRF2.2\Makefile">
+      <Filter>MRF</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\MRF2.2\README.txt">
+      <Filter>MRF</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

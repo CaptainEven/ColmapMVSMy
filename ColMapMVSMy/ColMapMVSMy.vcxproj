@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BilateralGrid.cpp" />
+    <ClCompile Include="consistency_graph.cc" />
+    <ClCompile Include="cuda.cc" />
+    <ClCompile Include="cudacc.cc" />
+    <ClCompile Include="depth_map.cc" />
+    <ClCompile Include="FastBilateralSolverMe.cpp" />
+    <ClCompile Include="fusion.cc" />
+    <ClCompile Include="guidedfilter.cpp" />
+    <ClCompile Include="image.cc" />
+    <ClCompile Include="include\MRF2.2\BP-S.cpp" />
+    <ClCompile Include="include\MRF2.2\GCoptimization.cpp" />
+    <ClCompile Include="include\MRF2.2\graph.cpp" />
+    <ClCompile Include="include\MRF2.2\ICM.cpp" />
+    <ClCompile Include="include\MRF2.2\LinkedBlockList.cpp" />
+    <ClCompile Include="include\MRF2.2\maxflow.cpp" />
+    <ClCompile Include="include\MRF2.2\MaxProdBP.cpp" />
+    <ClCompile Include="include\MRF2.2\mrf.cpp" />
+    <ClCompile Include="include\MRF2.2\regions-maxprod.cpp" />
+    <ClCompile Include="include\MRF2.2\TRW-S.cpp" />
+    <ClCompile Include="JointBilateralFilter.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_peac_mrf.cpp" />
+    <ClCompile Include="math.cc" />
+    <ClCompile Include="model.cc" />
+    <ClCompile Include="MyPatchMatch.cpp" />
+    <ClCompile Include="normal_map.cc" />
+    <ClCompile Include="patch_match.cc" />
+    <ClCompile Include="plane_detection.cpp" />
+    <ClCompile Include="RansacRunner.cpp" />
+    <ClCompile Include="SLICSuperpixels.cpp" />
+    <ClCompile Include="threading.cc" />
+    <ClCompile Include="Undistortion.cpp" />
+    <ClCompile Include="upsampler.cpp" />
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="workspace.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BilateralGrid.h" />
+    <ClInclude Include="BilateralTextureFilter.h" />
+    <ClInclude Include="consistency_graph.h" />
+    <ClInclude Include="cuda.h" />
+    <ClInclude Include="cudacc.h" />
+    <ClInclude Include="cuda_array_wrapper.h" />
+    <ClInclude Include="cuda_rotate.h" />
+    <ClInclude Include="depth_map.h" />
+    <ClInclude Include="FastBilateralSolverMe.h" />
+    <ClInclude Include="fusion.h" />
+    <ClInclude Include="gpu_mat.h" />
+    <ClInclude Include="gpu_mat_prng.h" />
+    <ClInclude Include="gpu_mat_ref_image.h" />
+    <ClInclude Include="guidedfilter.h" />
+    <ClInclude Include="image.h" />
+    <ClInclude Include="include\MRF2.2\block.h" />
+    <ClInclude Include="include\MRF2.2\BP-S.h" />
+    <ClInclude Include="include\MRF2.2\energy.h" />
+    <ClInclude Include="include\MRF2.2\GCoptimization.h" />
+    <ClInclude Include="include\MRF2.2\graph.h" />
+    <ClInclude Include="include\MRF2.2\ICM.h" />
+    <ClInclude Include="include\MRF2.2\LinkedBlockList.h" />
+    <ClInclude Include="include\MRF2.2\MaxProdBP.h" />
+    <ClInclude Include="include\MRF2.2\mrf.h" />
+    <ClInclude Include="include\MRF2.2\regions-new.h" />
+    <ClInclude Include="include\MRF2.2\TRW-S.h" />
+    <ClInclude Include="include\MRF2.2\typeTruncatedQuadratic2D.h" />
+    <ClInclude Include="include\peac\AHCParamSet.hpp" />
+    <ClInclude Include="include\peac\AHCPlaneFitter.hpp" />
+    <ClInclude Include="include\peac\AHCPlaneSeg.hpp" />
+    <ClInclude Include="include\peac\AHCTypes.hpp" />
+    <ClInclude Include="include\peac\AHCUtils.hpp" />
+    <ClInclude Include="include\peac\DisjointSet.hpp" />
+    <ClInclude Include="include\peac\eig33sym.hpp" />
+    <ClInclude Include="JointBilateralFilter.h" />
+    <ClInclude Include="mat.h" />
+    <ClInclude Include="math.h" />
+    <ClInclude Include="model.h" />
+    <ClInclude Include="MyPatchMatch.h" />
+    <ClInclude Include="normal_map.h" />
+    <ClInclude Include="patch_match.h" />
+    <ClInclude Include="patch_match_cuda.h" />
+    <ClInclude Include="peac\DisjointSet.hpp" />
+    <ClInclude Include="peac\eig33sym.hpp" />
+    <ClInclude Include="plane_detection.h" />
+    <ClInclude Include="RansacRunner.h" />
+    <ClInclude Include="SLICSuperpixels.h" />
+    <ClInclude Include="threading.h" />
+    <ClInclude Include="Undistortion.h" />
+    <ClInclude Include="upsampler.h" />
+    <ClInclude Include="Utils.h" />
+    <ClInclude Include="workspace.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="gpu_mat_prng.cu" />
+    <CudaCompile Include="gpu_mat_ref_image.cu" />
+    <CudaCompile Include="kernel.cu" />
+    <CudaCompile Include="CallKernelsCUDA.cu" />
+    <CudaCompile Include="patch_match_cuda.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\MRF2.2\Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\MRF2.2\README.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4B98E614-3AFD-48C3-AC17-A4FC4490009E}</ProjectGuid>
+    <RootNamespace>ColMapMVSMy</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.1.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1\common\inc;C:\eigen3.3.7;D:\ColMapMVSMy\ColMapMVSMy\common;C:\opencv-3.4.7\build\install\include;C:\opencv-3.4.7\build\install\include\opencv;C:\opencv-3.4.7\build\install\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\ColMapMVSMy\ColMapMVSMy\lib;C:\opencv-3.4.7\build\install\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1\common\inc;C:\eigen3.3.7;./common;C:\opencv-3.4.7\build\install\include;C:\opencv-3.4.7\build\install\include\opencv;C:\opencv-3.4.7\build\install\include\opencv2;$(CUDA_PATH)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>./lib;C:\opencv-3.4.7\build\install\x64\vc15\lib;$(CUDA_PATH)\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opencv_world347d.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;glut32.lib;glut64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>opencv_world347.lib;cudart_static.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;glut32.lib;glut64.lib;cublas.lib;cuda.lib;cudadevrt.lib;cudart.lib;OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CUDA_PATH_V10_1)\lib$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.1.targets" />
+  </ImportGroup>
+</Project>
