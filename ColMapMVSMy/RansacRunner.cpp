@@ -21,7 +21,7 @@ RansacRunner::RansacRunner(const float tolerance,
 
 	this->m_num_sample = num_sample;
 	this->m_num_sub_sample = num_sub_sample;
-	
+
 	assert(this->m_num_sample >= 3);
 	assert(this->m_num_sample >= this->m_num_sub_sample);
 
@@ -277,7 +277,7 @@ int RansacRunner::PlaneFitBy3PtsEi(float* plane_arr, float * ei_vals, float * ei
 	plane_arr[3] = D;
 
 	// PCA分解获取特征值特征向量
-	this->PlaneFitPCAEi(std::vector<cv::Point3f>(m_min_subsets, m_min_subsets+3), 
+	this->PlaneFitPCAEi(std::vector<cv::Point3f>(m_min_subsets, m_min_subsets + 3),
 		ei_vals, ei_vects);
 	memcpy(ei_vects, plane_arr, sizeof(float) * 3);
 
@@ -320,11 +320,11 @@ int RansacRunner::PlaneFitOLS1(float* plane_arr)
 	float c = X.at<float>(2, 0);
 
 	// 确定正确的法向方向: 确保normal指向camera
-	if (a * ave_x + b * ave_y + c * ave_z > 0.0f)
+	if (a * ave_x + b * ave_y + -1.0f * ave_z > 0.0f)
 	{
 		a = -a;
 		b = -b;
-		c = -c;
+		//c = -c;
 	}
 
 	const float DENOM = std::sqrtf(a * a + b * b + 1.0f);  // sqrt(a^2+b^2+1^2)
@@ -466,7 +466,7 @@ int RansacRunner::PlaneFitSVD(float* plane_arr)
 // 3D点云空间平面拟合PCA分解方法
 // 推导 https://www.jianshu.com/p/faa9953213dd
 int RansacRunner::PlaneFitPCA(float* plane_arr,
-							  float* ei_vals, float* ei_vects)
+	float* ei_vals, float* ei_vects)
 {
 	float ave_x = 0.0f, ave_y = 0.0f, ave_z = 0.0f;
 	for (auto pt : this->m_subsets)
@@ -670,7 +670,7 @@ int RansacRunner::PlaneFitPCAEi(const std::vector<cv::Point3f>& pts3d,
 	}
 
 	// 最小特征向量(法向量)L2归一化
-	const float DENOM = sqrtf(a*a + b*b + c*c);
+	const float DENOM = sqrtf(a*a + b * b + c * c);
 	a /= DENOM;
 	b /= DENOM;
 	c /= DENOM;
